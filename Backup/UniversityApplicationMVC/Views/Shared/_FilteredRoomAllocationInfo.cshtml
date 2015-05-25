@@ -1,0 +1,33 @@
+﻿@model IEnumerable<UniversityApplicationMVC.Models.UniversityModels.RoomAllocationInformation>
+
+@*@model IEnumerable<OneToManyRelationship.Models.RoomAllocationInfo>*@
+
+<table>
+    <tr>
+        <th>
+            Course Code
+        </th>
+        <th>
+            Name
+        </th>
+        <th>
+            Schedule Info
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CourseCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ScheduleInfo)
+        </td>
+   </tr>
+}
+
+</table>

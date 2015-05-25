@@ -1,0 +1,38 @@
+﻿@model UniversityApplicationMVC.Models.UniversityModels.RoomAllocationInformation
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>RoomAllocationInformation</legend>
+
+    <div class="display-label">Department</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Department.DepartmentCode)
+    </div>
+
+    <div class="display-label">CourseCode</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CourseCode)
+    </div>
+
+    <div class="display-label">Name</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+    <div class="display-label">ScheduleInfo</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ScheduleInfo)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

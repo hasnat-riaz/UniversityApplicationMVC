@@ -1,0 +1,40 @@
+﻿@model UniversityApplicationMVC.Models.UniversityModels.ClassRoomAllocation
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>ClassRoomAllocation</legend>
+
+    <div class="display-label">Course</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Course.CourseCode)
+    </div>
+
+    <div class="display-label">Room</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Room.RoomNo)
+    </div>
+
+    <div class="display-label">Day</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Day.DayName)
+    </div>
+
+    <div class="display-label">StartingTime</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.StartingTime)
+    </div>
+
+    <div class="display-label">EndingTime</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EndingTime)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ClassRoomAllocationId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

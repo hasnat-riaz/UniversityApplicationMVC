@@ -1,0 +1,30 @@
+﻿@model UniversityApplicationMVC.Models.UniversityModels.EnrollInACourse
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>EnrollInACourse</legend>
+
+    <div class="display-label">Student</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Student.Name)
+    </div>
+
+    <div class="display-label">Course</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Course.CourseCode)
+    </div>
+
+    <div class="display-label">Date</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Date)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
